@@ -66,6 +66,8 @@ class TrainerController extends Controller
             'description' => 'required',
         ]);
 
+        $trainer = new Trainer();
+        $file = $request->file('avatar');
         if ($file != "") {
             $name = time().$file->getClientOriginalName();
             $file->move(public_path().'/images/', $name);
@@ -184,8 +186,10 @@ class TrainerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Trainer $trainer)
     {
-        //
+        $file_path = \public_path().'/images/'.$trainer->avatar;
+        $trainer->delete();
+        return 'deleted';
     }
 }

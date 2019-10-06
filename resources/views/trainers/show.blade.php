@@ -7,11 +7,16 @@
 @endpush --}}
 
 @section('content')    
-
-<img class="card-img-top avatar-especifico rounded-circle mx-auto d-block" src="/images/{{$trainer->avatar}}" alt="">
-<div class="text-center">
-    <h5 class="card-title">{{$trainer->name}}</h5>
-    <p class="card-text">{{$trainer->description}}</p>
-    <a href="/trainers/{{$trainer->slug}}/edit" class="btn btn-primary">Editar</a>
-</div>
+    <img class="card-img-top avatar-especifico rounded-circle mx-auto d-block" src="/images/{{$trainer->avatar}}" alt="">
+    <div class="text-center">
+        <h5 class="card-title">{{$trainer->name}}</h5>
+        <p class="card-text">{{$trainer->description}}</p>
+        <a href="/trainers/{{$trainer->slug}}/edit" class="btn btn-primary">Editar</a>
+        <form class="form-group" method="POST" action="/trainers/{{$trainer->slug}}">
+            {{-- directiva de blade para proteger formularios  --}}
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+        </form>
+    </div>
 @endsection
