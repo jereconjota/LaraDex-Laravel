@@ -82,7 +82,8 @@ class TrainerController extends Controller
         $trainer->slug = $request->input('slug');
         $trainer->save();
 
-        return 'Saved';
+        // return 'Saved';
+        return redirect()->route('trainers.index');
     }
 
 
@@ -177,7 +178,8 @@ class TrainerController extends Controller
 
         $trainer->save(); //almacenamos los cambios
         
-        return 'updated';
+        // return 'updated';
+        return redirect()->route('trainers.show',[$trainer])->with('status','Entrenador actualizado correctamente');
     }
 
     /**
@@ -190,6 +192,7 @@ class TrainerController extends Controller
     {
         $file_path = \public_path().'/images/'.$trainer->avatar;
         $trainer->delete();
-        return 'deleted';
+        // return 'deleted';
+        return redirect()->route('trainers.index');
     }
 }
