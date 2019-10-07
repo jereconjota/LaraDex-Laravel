@@ -7,11 +7,7 @@
 @endpush --}}
 
 @section('content')    
-    @if (session('status'))
-        <div alert alert-success>
-            {{ session('status')}}
-        </div>
-    @endif
+    @include('common.succes')
     <img class="card-img-top avatar-especifico rounded-circle mx-auto d-block" src="/images/{{$trainer->avatar}}" alt="">
     <div class="text-center">
         <h5 class="card-title">{{$trainer->name}}</h5>

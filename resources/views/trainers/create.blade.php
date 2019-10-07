@@ -4,15 +4,7 @@
 
 @section('content')    
 
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $message)
-                <li>{{ $message }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    @include('common.errors')
     {{-- @if ($errors->has('name'))
         <h1>{{$errors->first('name')}}</h1>
     @endif --}}
