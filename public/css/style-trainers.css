@@ -1,0 +1,18 @@
+.trainer-card{
+    width: 18rem; 
+    margin-top: 70px;
+}
+
+.avatar{
+    height:100px; 
+    width: 100px; 
+    background-color: #EFEFEF;
+    margin: 20px;
+}
+
+.avatar-especifico{
+    height:200px; 
+    width: 200px; 
+    background-color: #EFEFEF;
+    margin: 20px;
+}
