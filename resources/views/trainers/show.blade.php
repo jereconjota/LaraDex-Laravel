@@ -7,7 +7,7 @@
 @endpush --}}
 
 @section('content')    
-    @include('common.succes')
+    @include('common.success')
     <img class="card-img-top avatar-especifico rounded-circle mx-auto d-block" src="/images/{{$trainer->avatar}}" alt="">
     <div class="text-center">
         <h5 class="card-title">{{$trainer->name}}</h5>

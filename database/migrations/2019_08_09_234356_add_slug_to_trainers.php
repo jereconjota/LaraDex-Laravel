@@ -15,6 +15,7 @@ class AddSlugToTrainers extends Migration
     {
         Schema::table('trainers', function (Blueprint $table) {
             $table->string('slug')->unique();
+            // $table->unique('slug');
         });
     }
 
