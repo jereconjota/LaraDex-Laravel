@@ -1,4 +1,4 @@
 @extends('layouts.app')
 @section('content')
-    <example-component></example-component>
+    <pokemons-component></pokemons-component>
 @endsection
