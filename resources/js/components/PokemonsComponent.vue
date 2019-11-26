@@ -4,7 +4,8 @@
         <div class="col-sm" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
 
             <div class="card text-center h-100 trainer-card">
-            <img class="card-img-top avatar rounded-circle mx-auto d-block" src="" alt="">
+            <img class="card-img-top avatar rounded-circle mx-auto d-block" alt=""
+            v-bind:src="pokemon.picture">
                 <div class="card-body">
                     <h5 class="card-title">{{pokemon.name}}</h5>
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure ex distinctio corrupti laudantium delectus nostrum, excepturi ipsum quo consequatur. Et sequi a rerum iste quaerat illum dolores autem porro expedita.</p>
