@@ -18,6 +18,7 @@
 </template>
 
 <script>
+    import EventBus from '../../event-bus'
     export default{
         data(){
             return{
@@ -25,8 +26,13 @@
                     // {id: 1, name: 'Pikachu'},
                     // {id: 2, name: 'cubebom'},
                     // {id: 3, name: 'Charizard'},
-                ], loading:true,
+                ], loading:true
             }
+        },
+        created(){ //created se ejecuta cuando este componente se crea
+            EventBus.$on('pokemon-added', data => {  //escucha el evento 
+                this.pokemons.push(data)
+            })
         },
         mounted(){
             // console.log('component mount')

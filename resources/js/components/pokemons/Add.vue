@@ -30,6 +30,7 @@
 </template>
 
 <script>
+    import EventBus from '../../event-bus'
     export default{
         data(){
             return{
@@ -44,9 +45,10 @@
                     picture: this.picture
                 })
                 .then(function(rpse){
-                    console.log(rpse)
+                    // console.log(rpse)
                     $('#addPokemon').modal('hide')
-                    console.log(rpse.data.pokemon)
+                    EventBus.$emit('pokemon-added', rpse.data.pokemon) //emitimos un evento con nombre del evento e info
+                    // console.log(rpse.data.pokemon)
                 })
                 .catch(function(err){
                     console.log(err)

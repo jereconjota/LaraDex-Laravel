@@ -3,7 +3,7 @@
 @section('title','Pokemons')
 
 @section('content')
-    <add-pokemon-btn></add-pokemon-btn>
-    <pokemons-component></pokemons-component>
-    <create-pokemon></create-pokemon>
+<modal-button></modal-button>
+<list-of-pokemons></list-of-pokemons>
+<create-form-pokemon></create-form-pokemon>
 @endsection

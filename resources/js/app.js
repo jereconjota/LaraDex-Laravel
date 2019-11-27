@@ -19,11 +19,10 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('pokemons-component', require('./components/PokemonsComponent.vue').default);
-Vue.component('spinner', require('./components/Spinner.vue').default);
-Vue.component('add-pokemon-btn', require('./components/AddPokemonComponent.vue').default);
-Vue.component('create-pokemon', require('./components/CreatePokemonComponent.vue').default);
+Vue.component('list-of-pokemons', require('./components/pokemons/List.vue').default);
+Vue.component('create-form-pokemon', require('./components/pokemons/Add.vue').default);
+Vue.component('modal-button', require('./components/pokemons/Modal-button.vue').default);
+Vue.component('spinner', require('./components/widgets/spinner.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
