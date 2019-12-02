@@ -1,9 +1,9 @@
 <template>
     <div class="row">
        <spinner v-show="loading"></spinner>
-        <div class="col-sm" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
+        <div class="col-sm m-2" v-for="pokemon in pokemons" v-bind:key="pokemon.id">
 
-            <div class="card text-center h-100 trainer-card">
+            <div class="card text-center h-100  trainer-card">
             <img class="card-img-top avatar rounded-circle mx-auto d-block" alt=""
             v-bind:src="pokemon.picture">
                 <div class="card-body">

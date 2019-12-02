@@ -38124,8 +38124,8 @@ var render = function() {
       }),
       _vm._v(" "),
       _vm._l(_vm.pokemons, function(pokemon) {
-        return _c("div", { key: pokemon.id, staticClass: "col-sm" }, [
-          _c("div", { staticClass: "card text-center h-100 trainer-card" }, [
+        return _c("div", { key: pokemon.id, staticClass: "col-sm m-2" }, [
+          _c("div", { staticClass: "card text-center h-100  trainer-card" }, [
             _c("img", {
               staticClass: "card-img-top avatar rounded-circle mx-auto d-block",
               attrs: { alt: "", src: pokemon.picture }

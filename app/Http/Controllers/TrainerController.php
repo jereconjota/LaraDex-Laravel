@@ -3,6 +3,7 @@
 namespace LaraDex\Http\Controllers;
 
 use LaraDex\Trainer;
+use LaraDex\User;
 use Illuminate\Http\Request;
 use LaraDex\Http\Requests\StoreTrainerRequest;
 class TrainerController extends Controller
@@ -14,7 +15,10 @@ class TrainerController extends Controller
      */
     public function index(Request $request)
     {
-        $request->user()->authorizeRoles(['admin','user']);
+
+        if (!empty($request->user())) {
+            $request->user()->authorizeRoles(['admin','user']);
+        }
 
         $trainers = Trainer::all();
 

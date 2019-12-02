@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Trainers</a>
-                    <a href="https://laracasts.com">Pokemon's</a>
+                    <a href="http://127.0.0.1:8000/trainers">Trainers</a>
+                    <a href="http://127.0.0.1:8000/pokemons">Pokemon's</a>
                     {{-- <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
