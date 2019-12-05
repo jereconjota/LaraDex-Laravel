@@ -50,6 +50,8 @@
                 .then(function(rpse){
                     console.log(rpse)
                     $('#addPokemon').modal('hide')
+                    // $('body').removeClass('modal-open');
+                    // $('.modal-backdrop').remove();
                     EventBus.$emit('pokemon-added', rpse.data.pokemon) //emitimos un evento con nombre del evento e info
                     // console.log(rpse.data.pokemon)
                 })

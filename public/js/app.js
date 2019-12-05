@@ -1747,7 +1747,9 @@ __webpack_require__.r(__webpack_exports__);
         picture: this.picture
       }).then(function (rpse) {
         console.log(rpse);
-        $('#addPokemon').modal('hide');
+        $('#addPokemon').modal('hide'); // $('body').removeClass('modal-open');
+        // $('.modal-backdrop').remove();
+
         _event_bus__WEBPACK_IMPORTED_MODULE_0__["default"].$emit('pokemon-added', rpse.data.pokemon); //emitimos un evento con nombre del evento e info
         // console.log(rpse.data.pokemon)
       })["catch"](function (err) {
