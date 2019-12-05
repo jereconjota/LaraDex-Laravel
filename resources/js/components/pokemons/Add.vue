@@ -40,12 +40,15 @@
         },
         methods: {
             savePokemon: function(){
-                axios.post('http://127.0.0.1:8000/pokemons',{
+                let currentRoute = window.location.pathname
+                console.log(currentRoute)
+                // axios.post('http://127.0.0.1:8000/pokemons',{
+                    axios.post(`http://127.0.0.1:8000${currentRoute}/pokemons`,{
                     name: this.name,
                     picture: this.picture
                 })
                 .then(function(rpse){
-                    // console.log(rpse)
+                    console.log(rpse)
                     $('#addPokemon').modal('hide')
                     EventBus.$emit('pokemon-added', rpse.data.pokemon) //emitimos un evento con nombre del evento e info
                     // console.log(rpse.data.pokemon)

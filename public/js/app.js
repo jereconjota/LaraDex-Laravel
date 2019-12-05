@@ -1739,11 +1739,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     savePokemon: function savePokemon() {
-      axios.post('http://127.0.0.1:8000/pokemons', {
+      var currentRoute = window.location.pathname;
+      console.log(currentRoute); // axios.post('http://127.0.0.1:8000/pokemons',{
+
+      axios.post("http://127.0.0.1:8000".concat(currentRoute, "/pokemons"), {
         name: this.name,
         picture: this.picture
       }).then(function (rpse) {
-        // console.log(rpse)
+        console.log(rpse);
         $('#addPokemon').modal('hide');
         _event_bus__WEBPACK_IMPORTED_MODULE_0__["default"].$emit('pokemon-added', rpse.data.pokemon); //emitimos un evento con nombre del evento e info
         // console.log(rpse.data.pokemon)
@@ -1811,7 +1814,10 @@ __webpack_require__.r(__webpack_exports__);
     // console.log('component mount')
     //Usamos Axios, cliente HTTP basado en promesas
     // axios.get('http://127.0.0.1:8000/pokemons').then(response => (this.pokemons = response.data))
-    axios.get('http://127.0.0.1:8000/pokemons').then(function (rpse) {
+    var currentRoute = window.location.pathname; // axios.get('http://127.0.0.1:8000/pokemons')
+
+    axios.get("http://127.0.0.1:8000".concat(currentRoute, "/pokemons")).then(function (rpse) {
+      console.log(rpse);
       _this2.pokemons = rpse.data;
       _this2.loading = false;
     });
