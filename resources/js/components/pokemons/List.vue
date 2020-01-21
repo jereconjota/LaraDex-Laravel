@@ -37,10 +37,10 @@
         mounted(){
             // console.log('component mount')
             //Usamos Axios, cliente HTTP basado en promesas
-            // axios.get('http://127.0.0.1:8000/pokemons').then(response => (this.pokemons = response.data))
+            // axios.get('http://laradex-laravel.test/pokemons').then(response => (this.pokemons = response.data))
             let currentRoute = window.location.pathname
-            // axios.get('http://127.0.0.1:8000/pokemons')
-            axios.get(`http://127.0.0.1:8000${currentRoute}/pokemons`)
+            // axios.get('http://laradex-laravel.test/pokemons')
+            axios.get(`http://laradex-laravel.test${currentRoute}/pokemons`)
             .then((rpse) => {
                 console.log(rpse)
                 this.pokemons = rpse.data

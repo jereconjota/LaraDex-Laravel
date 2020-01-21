@@ -42,8 +42,8 @@
             savePokemon: function(){
                 let currentRoute = window.location.pathname
                 console.log(currentRoute)
-                // axios.post('http://127.0.0.1:8000/pokemons',{
-                    axios.post(`http://127.0.0.1:8000${currentRoute}/pokemons`,{
+                // axios.post('http://laradex-laravel.test/pokemons',{
+                    axios.post(`http://laradex-laravel.test${currentRoute}/pokemons`,{
                     name: this.name,
                     picture: this.picture
                 })

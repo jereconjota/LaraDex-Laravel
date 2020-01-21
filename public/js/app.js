@@ -1740,9 +1740,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     savePokemon: function savePokemon() {
       var currentRoute = window.location.pathname;
-      console.log(currentRoute); // axios.post('http://127.0.0.1:8000/pokemons',{
+      console.log(currentRoute); // axios.post('http://laradex-laravel.test/pokemons',{
 
-      axios.post("http://127.0.0.1:8000".concat(currentRoute, "/pokemons"), {
+      axios.post("http://laradex-laravel.test".concat(currentRoute, "/pokemons"), {
         name: this.name,
         picture: this.picture
       }).then(function (rpse) {
@@ -1815,10 +1815,10 @@ __webpack_require__.r(__webpack_exports__);
 
     // console.log('component mount')
     //Usamos Axios, cliente HTTP basado en promesas
-    // axios.get('http://127.0.0.1:8000/pokemons').then(response => (this.pokemons = response.data))
-    var currentRoute = window.location.pathname; // axios.get('http://127.0.0.1:8000/pokemons')
+    // axios.get('http://laradex-laravel.test/pokemons').then(response => (this.pokemons = response.data))
+    var currentRoute = window.location.pathname; // axios.get('http://laradex-laravel.test/pokemons')
 
-    axios.get("http://127.0.0.1:8000".concat(currentRoute, "/pokemons")).then(function (rpse) {
+    axios.get("http://laradex-laravel.test".concat(currentRoute, "/pokemons")).then(function (rpse) {
       console.log(rpse);
       _this2.pokemons = rpse.data;
       _this2.loading = false;
