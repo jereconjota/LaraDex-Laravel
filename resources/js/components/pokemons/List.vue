@@ -40,7 +40,8 @@
             // axios.get('http://laradex-laravel.test/pokemons').then(response => (this.pokemons = response.data))
             let currentRoute = window.location.pathname
             // axios.get('http://laradex-laravel.test/pokemons')
-            axios.get(`http://laradex-laravel.test${currentRoute}/pokemons`)
+            console.log(currentRoute)
+            axios.get(`http://laradex-laravel.test/${currentRoute}/pokemons`)
             .then((rpse) => {
                 console.log(rpse)
                 this.pokemons = rpse.data
